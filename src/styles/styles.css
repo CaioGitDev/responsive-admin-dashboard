@@ -102,4 +102,52 @@ body.dark-theme {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: var(--body-font);
 }
+
+/*==================== sidebar ====================*/
+
+.sidebar {
+  width: 345px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: var(--first-color);
+}
+
+.sidebar-brand {
+  height: 90px;
+  padding: 1rem 0rem 1rem 2rem;
+  color: #fff;
+}
+
+.sidebar-brand span {
+  display: inline-block;
+  padding-right: var(--mb-1);
+}
+
+.sidebar-menu li {
+  width: 100%;
+  margin-bottom: var(--mb-1);
+  padding-left: var(--mb-2);
+}
+
+.sidebar-menu a {
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.sidebar-menu a span:first-child {
+  font-size: 1.5rem;
+  padding-right: var(--mb-1);
+}
+/*==================== main content ====================*/
+.main-content {
+  margin-left: 345px;
+}
+
+
