@@ -39,6 +39,30 @@ const seeds_sidebarMenus = {
     },
   ]
 }
+const seeds_mainCardSimples = {
+  "cards": [
+    {
+      "card__title": "33",
+      "card__subtitle": "Customers",
+      "card_iconClass": "las la-users"
+    },
+    {
+      "card__title": "79",
+      "card__subtitle": "Projects",
+      "card_iconClass": "las la-clipboard"
+    },
+    {
+      "card__title": "221",
+      "card__subtitle": "Orders",
+      "card_iconClass": "las la-shopping-bag"
+    },
+    {
+      "card__title": "15,000.00 €",
+      "card__subtitle": "Income",
+      "card_iconClass": "las la-wallet"
+    },
+  ]
+}
 
 // define html templates
 const template_sidebarMenu = {'<>':'ul','html':[
@@ -50,12 +74,27 @@ const template_sidebarMenu = {'<>':'ul','html':[
   ]}
 ]};
 
-// create sidebar menu links
-const sidebarMenu = () => {
-  const sideBar = document.querySelector("main__sidebar-menu")
+const template_mainCardSimple = {"<>":"div","class":"cards","html":[
+  {"<>":"div","class":"card__single",'obj': function() {return (this.cards)}, "html":[
+      {"<>":"div","html":[
+          {"<>":"h1","html":"${card__title}"},
+          {"<>":"span","html":"${card__subtitle}"}
+        ]},
+      {"<>":"div","html":[
+          {"<>":"span","class":"${card_iconClass}","html":""}
+        ]}
+    ]}
+]}
 
+// create sidebar menu links
+const createSidebarMenu = () => {
   $('#main__sidebar-menu').json2html(seeds_sidebarMenus, template_sidebarMenu)
 }
 
+//create main card simple
+const createMainCardSimple = () => {
+  $('#main__cards').json2html(seeds_mainCardSimples, template_mainCardSimple)
+}
 
-sidebarMenu()
+createSidebarMenu()
+createMainCardSimple()
