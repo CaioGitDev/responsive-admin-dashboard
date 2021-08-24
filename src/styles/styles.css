@@ -179,6 +179,7 @@ header {
   width: calc(100% - 345px);
   top: 0;
   z-index: var(--z-fixed);
+  background: var(--container-color);
 }
 header h2 {
   color: var(--title-color);
@@ -254,5 +255,112 @@ header label span {
   color: var(--container-color);
 }
 
+/*==================== recent ====================*/
+.recent__grid {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 67% auto;
+}
+
+/*==================== recent card ====================*/
+.card {
+  background: var(--container-color);
+  border-radius: 5px;
+}
+.card__header,
+.card__body {
+  padding: var(--mb-1);
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid var(--first-color-lighter); */
+}
+.card__header button {
+  background: var(--first-color);
+  border-radius: 10px;
+  color: #fff;
+  font-size: var(--small-font-size);
+  padding: .5rem 1rem;
+  border: 1px solid var(--first-color);
+  cursor: pointer;
+}
+.card__header button:hover {
+  background: var(--first-color-alt);
+}
+/*==================== recent project ====================*/
+table {
+  border-collapse: collapse;
+}
+thead tr {
+  border-top: 1px solid var(--first-color-lighter);
+  border-bottom: 2px solid var(--first-color-lighter);
+}
+thead td {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+td {
+  padding: .5rem 1rem;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+td .status {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: var(--mb-1);
+}
+tr td:last-child {
+  display: flex;
+  align-items: center;
+}
+.table__responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+.status.purple {
+  background-color: rebeccapurple;
+}
+.status.pink {
+  background-color: deeppink;
+}
+.status.orange {
+  background-color: orangered;
+}
+
+/*==================== recent customers ====================*/
+.customer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.info img {
+  border-radius: 50%;
+  margin-right: var(--mb-1);
+}
+.info h4 {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}
+.info small {
+  font-weight: var(--small-font-size);
+  color: var(--text-color);
+}
+.contact span {
+  font-size: var(--h2-font-size);
+  display: inline-block;
+  margin-left: var(--mb-0-5);
+  color: var(--first-color);
+}
 
 
