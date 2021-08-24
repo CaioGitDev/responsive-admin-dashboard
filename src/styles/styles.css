@@ -228,6 +228,7 @@ header label span {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  margin-top: var(--mb-1);
 }
 .card__single {
   display: flex;
@@ -236,7 +237,21 @@ header label span {
   padding: var(--mb-2);
   border-radius: 2px;
 }
-
+.card__single div:last-child span {
+  font-size: var(--mb-3);
+  color: var(--first-color);
+}
+.card__single div:first-child span {
+  color: var(--text-color-light);
+}
+.card__single:last-child {
+  background: var(--first-color);
+}
+.card__single:last-child h1,
+.card__single:last-child div:first-child span,
+.card__single:last-child div:last-child span {
+  color: var(--container-color);
+}
 
 
 
