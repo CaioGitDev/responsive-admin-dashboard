@@ -116,6 +116,7 @@ body.dark-theme {
   top: 0;
   height: 100%;
   background: var(--first-color);
+  z-index: var(--z-fixed);
 }
 
 .sidebar-brand {
@@ -128,14 +129,17 @@ body.dark-theme {
   display: inline-block;
   padding-right: var(--mb-1);
 }
-
+.sidebar-menu {
+  margin-top: var(--mb-1);
+}
 .sidebar-menu li {
   width: 100%;
   margin-bottom: var(--mb-1);
-  padding-left: var(--mb-2);
+  padding-left: var(--mb-1);
 }
 
 .sidebar-menu a {
+  padding-left: var(--mb-1);
   display: block;
   color: #fff;
   font-size: 1.1rem;
@@ -145,9 +149,94 @@ body.dark-theme {
   font-size: 1.5rem;
   padding-right: var(--mb-1);
 }
+
+.sidebar-menu a.active {
+  background: #fff;
+  padding-top: var(--mb-1);
+  padding-bottom: var(--mb-1);
+  color: var(--first-color);
+  border-radius: 30px 0 0 30px;
+}
 /*==================== main content ====================*/
+main {
+  margin-top: 80px;
+  padding: 2rem 1.5rem;
+  background: var(--body-color);
+  min-height: calc(100vh - 90px);
+}
 .main-content {
   margin-left: 345px;
 }
+
+/*==================== header ====================*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--mb-1) var(--mb-1-5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 345px;
+  width: calc(100% - 345px);
+  top: 0;
+  z-index: var(--z-fixed);
+}
+header h2 {
+  color: var(--title-color);
+  align-self: center;
+}
+header label span {
+  font-size: var(--h2-font-size);
+  padding-right: 1rem;
+}
+/*==================== search ====================*/
+.search__wrapper {
+  border: 1px solid var(--first-color-second);
+  border-radius: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+.search__wrapper span {
+  display: inline-block;
+  padding: 0rem 1rem;
+  font-size: var(--h2-font-size);
+}
+.search__wrapper input {
+  height: 100%;
+  padding: .5rem;
+  border: none;
+  outline: none;
+}
+
+/*==================== user ====================*/
+.user__wrapper {
+  display: flex;
+  align-items: center;
+}
+.user__wrapper img {
+  border-radius: 50%;
+  margin-right: var(--mb-1);
+}
+.user__wrapper small {
+  display: inline-block;
+  color: var(--text-color);
+}
+
+/*==================== cards ====================*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.card__single {
+  display: flex;
+  justify-content: space-between;
+  background: var(--container-color);
+  padding: var(--mb-2);
+  border-radius: 2px;
+}
+
+
 
 
