@@ -10,7 +10,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Admin Dashboard</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximun-scale=1">
   <link rel="stylesheet"
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
   <link rel="stylesheet" href="src/styles/styles.css">
@@ -22,11 +23,17 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+  <input type="checkbox" id="nav-toggle">
   <!-- SIDE BAR -->
   <div class="sidebar">
     <!-- SIDE BAR LOGO -->
     <div class="sidebar-brand">
-      <h2><span class="lab la-accusoft"></span>Caio Rosa</h2>
+      <h2>
+        <span class="lab la-accusoft"></span>
+        <span>
+          Caio Rosa
+        </span>
+      </h2>
     </div>
 
     <!-- SIDE BAR MENU -->
@@ -39,7 +46,7 @@
     <header>
       <!-- HEADER TITLE -->
       <h2>
-        <label for="">
+        <label for="nav-toggle">
           <span class="las la-bars"></span>
         </label>
         Dashboard
@@ -161,7 +168,7 @@
                   <span class="las la-phone"></span>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>
