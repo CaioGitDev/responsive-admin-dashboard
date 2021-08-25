@@ -411,6 +411,18 @@ tr td:last-child {
     width: calc(100% - 70px);
     left: 70px;
   }
+
+  .sidebar:hover {
+    width: 345px;
+    z-index: 200;
+  }
+  .sidebar:hover li a {
+    padding-left: var(--mb-1);
+  }
+  .sidebar:hover .sidebar-brand h2 span:last-child,
+  .sidebar:hover li a span:last-child {
+    display: inline;
+  }
 }
 
 @media only screen and (max-width: 960px) {
