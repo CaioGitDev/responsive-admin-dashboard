@@ -117,6 +117,7 @@ body.dark-theme {
   height: 100%;
   background: var(--first-color);
   z-index: var(--z-fixed);
+  transition: width 300ms;
 }
 
 .sidebar-brand {
@@ -157,6 +158,31 @@ body.dark-theme {
   color: var(--first-color);
   border-radius: 30px 0 0 30px;
 }
+/*==================== sidebar toggle ====================*/
+#nav-toggle {
+  display: none;
+}
+#nav-toggle:checked + .sidebar {
+  width: 70px;
+}
+/* #nav-toggle:checked + .sidebar .sidebar-brand h2 span, */
+#nav-toggle:checked + .sidebar li a {
+  padding-left: var(--mb-1);
+}
+
+#nav-toggle:checked + .sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked + .sidebar li a span:last-child {
+  display: none;
+}
+
+#nav-toggle:checked ~ .main-content {
+  margin-left: 70px;
+}
+#nav-toggle:checked ~ .main-content header {
+  width: calc(100% - 70px);
+  left: 70px;
+}
+
 /*==================== main content ====================*/
 main {
   margin-top: 80px;
@@ -166,6 +192,7 @@ main {
 }
 .main-content {
   margin-left: 345px;
+  transition: margin-left 300ms;
 }
 
 /*==================== header ====================*/
@@ -180,6 +207,7 @@ header {
   top: 0;
   z-index: var(--z-fixed);
   background: var(--container-color);
+  transition: left 300ms;
 }
 header h2 {
   color: var(--title-color);
@@ -260,7 +288,7 @@ header label span {
   margin-top: 3.5rem;
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: 67% auto;
+  grid-template-columns: 65% auto;
 }
 
 /*==================== recent card ====================*/
@@ -337,7 +365,7 @@ tr td:last-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 1rem;
+  padding: .5rem .7rem;
 }
 .info {
   display: flex;
@@ -364,3 +392,29 @@ tr td:last-child {
 }
 
 
+/*==================== medias query ====================*/
+@media only screen and (max-width: 1200px) {
+  .sidebar {
+    width: 70px;
+  }
+  .sidebar li a {
+    padding-left: var(--mb-1);
+  }
+  .sidebar .sidebar-brand h2 span:last-child,
+  .sidebar li a span:last-child {
+    display: none;
+  }
+  .main-content {
+    margin-left: 70px;
+  }
+  .main-content header {
+    width: calc(100% - 70px);
+    left: 70px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
